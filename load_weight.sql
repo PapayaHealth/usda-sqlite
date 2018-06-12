@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `weight`;
 CREATE TABLE `weight` (
-    food_id int REFERENCES food(id) NOT NULL,
+    food_id text REFERENCES food(id) NOT NULL,
     sequence_num int NOT NULL,
     amount float NOT NULL,
     description text NOT NULL,

@@ -28,4 +28,10 @@ sqlite3 $1 < load_nutrition.sql
 echo "Loading weight..."
 sqlite3 $1 < load_weight.sql
 
+echo "Loading langual descriptions..."
+sqlite3 $1 < load_langual_desc.sql
+
+echo "Loading langual rel..."
+sqlite3 $1 < load_langual_rel.sql
+
 echo "Done."

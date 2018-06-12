@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS `nutrition`;
 CREATE TABLE `nutrition` (
-  food_id int REFERENCES food(id) NOT NULL,
+  food_id text REFERENCES food(id) NOT NULL,
   nutrient_id int REFERENCES nutrient(id) NOT NULL,
-  amount float NOT NULL,
+  nutrient_value float NOT NULL,
   num_data_points int NOT NULL,
   std_error float,
   source_code text NOT NULL,
@@ -17,7 +17,6 @@ CREATE TABLE `nutrition` (
   upper_error_bound float,
   comments text,
   modification_date text,
-  confidence_code text,
   PRIMARY KEY(food_id, nutrient_id)
 );
 
